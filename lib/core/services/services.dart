@@ -35,6 +35,7 @@ class LongNeckDuckProvider with ChangeNotifier {
       await managerCommand.execCommand();
 
       _status = null;
+      notifyListeners();
     } catch (_) {
       _status = null;
       notifyListeners();
